@@ -8,10 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var play: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func rock() {
+        
+    }
+    
+    @IBAction func paper() {
+        
+    }
+    
+    @IBAction func scissors() {
+        
     }
 
 
