@@ -86,7 +86,7 @@ class ViewController: UIViewController {
             
             let play = playGame("scissors", opponent)
             
-            controller.result.text = play
+            controller.results = play
             
         } else if segue.identifier == "paperSegue" {
             let controller = segue.destination as! resultViewController
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
             
             let play = playGame("rock", opponent)
             
-            controller.result.text = play
+            controller.results = play
             
         }
     }

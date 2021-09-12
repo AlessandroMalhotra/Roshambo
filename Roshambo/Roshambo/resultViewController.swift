@@ -30,6 +30,14 @@ class resultViewController: UIViewController {
     
     @IBAction func playAgain() {
         
+        performSegue(withIdentifier: "playAgain", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        self.results = ""
+        self.result.text = ""
+        
     }
    
     
