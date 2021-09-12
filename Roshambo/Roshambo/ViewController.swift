@@ -23,6 +23,30 @@ class ViewController: UIViewController {
     
     func playGame(_ buttonPressed: String, _ opponentValue: String) -> String {
         
+        let result = (buttonPressed, opponentValue)
+        
+        switch result {
+        case ("paper", "rock"):
+            return "Paper covers Rock, you Win!"
+        
+        case ("rock", "scissors"):
+            return "Rock smashses Scissors, you Win"
+        
+        case ("scissors", "paper"):
+            return "Scissors cuts Paper, you Win!"
+        
+        case ("rock", "paper"):
+            return "Paper covers Rock, you Loose!"
+        
+        case ("scissors", "rock"):
+            return "Rock smashses Scissors, you Loose"
+            
+        case ("paper", "scissors"):
+            return "Scissors cuts Paper, you Loose!"
+        
+        default:
+            return "Draw!"
+        }
     }
 
     @IBAction func rock() {
@@ -34,6 +58,8 @@ class ViewController: UIViewController {
         let opponent = opponentPlay()
         
         let play = playGame("rock", opponent)
+        
+        controller.results = play
         
         present(controller, animated: true, completion: nil)
         
@@ -56,17 +82,21 @@ class ViewController: UIViewController {
         if segue.identifier == "scissorsSegue" {
             let controller = segue.destination as! resultViewController
             
-            controller.opponent = opponentPlay()
-            controller.player = "scissors"
+            let opponent = opponentPlay()
+            
+            let play = playGame("scissors", opponent)
+            
+            controller.result.text = play
             
         } else if segue.identifier == "paperSegue" {
             let controller = segue.destination as! resultViewController
             
-            controller.opponent = opponentPlay()
-            controller.player = "paper"
+            let opponent = opponentPlay()
+            
+            let play = playGame("rock", opponent)
+            
+            controller.result.text = play
+            
         }
-        
     }
-
 }
-

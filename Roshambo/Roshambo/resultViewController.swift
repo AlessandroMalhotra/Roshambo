@@ -9,6 +9,7 @@ import UIKit
 
 class resultViewController: UIViewController {
     
+    var results: String?
     
     @IBOutlet var result: UILabel!
     
@@ -18,6 +19,11 @@ class resultViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        if let results = self.results {
+            self.result.text = results
+        } else {
+            self.result = nil
+        }
         
     }
     
