@@ -50,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="play" destination="xxo-id-H9E" id="q7B-fi-Jik"/>
+                        <segue destination="VSQ-H4-dvS" kind="modal" identifier="paperSegue" id="lGa-Xo-xo9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,9 +60,9 @@
         <!--Result View Controller-->
         <scene sceneID="kdN-YJ-4ca">
             <objects>
-                <viewController id="VSQ-H4-dvS" customClass="resultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resultViewController" id="VSQ-H4-dvS" customClass="resultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="coB-Ca-omZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-ey-bjf">

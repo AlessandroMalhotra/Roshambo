@@ -8,6 +8,13 @@
 import UIKit
 
 class resultViewController: UIViewController {
+    
+    /// need to create a optional value for the computer which will be generated in view controller and assigned then passed to this controller
+    /// need to create a optional value for user this will change depend on what button is pressed so rock, paper or scissors
+    
+    /// Compare the user’s play with the randomly generated play to determine a winner. Compare opponent and user value to determine a winner, need to work out the amount of options and come up with something
+    
+    /// method to display message depending on who is a winner
 
     override func viewDidLoad() {
         super.viewDidLoad()
