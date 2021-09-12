@@ -28,13 +28,17 @@ class ViewController: UIViewController {
         
         controller = storyboard?.instantiateViewController(withIdentifier: "resultViewController") as! resultViewController
         
+        controller.opponent = opponentPlay()
+        controller.player = "rock"
+        
         present(controller, animated: true, completion: nil)
         
     }
     
     @IBAction func paper() {
         
-        performSegue(withIdentifier: "paperSegue", sender: self)
+        self.performSegue(withIdentifier: "paperSegue", sender: self)
+        
         
     }
     
@@ -44,11 +48,21 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! resultViewController
         
+        if segue.identifier == "scissorsSegue" {
+            let controller = segue.destination as! resultViewController
+            
+            controller.opponent = opponentPlay()
+            controller.player = "scissors"
+            
+        } else if segue.identifier == "paperSegue" {
+            let controller = segue.destination as! resultViewController
+            
+            controller.opponent = opponentPlay()
+            controller.player = "paper"
+        }
         
     }
-
 
 }
 
