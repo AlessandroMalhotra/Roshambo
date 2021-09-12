@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     
     /// method that generates a random value for the computer from a list of values containing rock, paper, scissors and return this value. Need to call this method in each action method and pass it to result view controller.
     
+    func opponentPlay() -> String {
+        let choices = ["rock", "paper", "scissors"]
+        
+        let result = choices.randomElement()!
+        
+        return result
+    }
+    
 
     @IBAction func rock() {
         
@@ -31,6 +39,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func scissors() {
+        
+        performSegue(withIdentifier: "scissorsSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! resultViewController
+        
         
     }
 
