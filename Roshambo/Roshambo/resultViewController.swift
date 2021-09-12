@@ -9,24 +9,26 @@ import UIKit
 
 class resultViewController: UIViewController {
     
-    var opponent: String?
-    var player: String?
     
+    @IBOutlet var result: UILabel!
     
-    
-    /// Compare the user’s play with the randomly generated play to determine a winner. Compare opponent and user value to determine a winner, need to work out the amount of options and come up with something
+    /// Compare the user’s play with the randomly generated play to determine a winner. Compare opponent and user value to determine a winner, need to work out the amount of options and come up with something: switch statement with player result and then case comparisions and set the label text depending on the result
     
     /// method to display message depending on who is a winner
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
     }
+    
     
     @IBAction func playAgain() {
         
     }
+   
+    
+    
+    /// Do any additional setup after loading the view.
     
 
     /*

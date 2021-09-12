@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         return result
     }
     
+    func playGame(_ buttonPressed: String, _ opponentValue: String) -> String {
+        
+    }
 
     @IBAction func rock() {
         
@@ -28,8 +31,9 @@ class ViewController: UIViewController {
         
         controller = storyboard?.instantiateViewController(withIdentifier: "resultViewController") as! resultViewController
         
-        controller.opponent = opponentPlay()
-        controller.player = "rock"
+        let opponent = opponentPlay()
+        
+        let play = playGame("rock", opponent)
         
         present(controller, animated: true, completion: nil)
         
