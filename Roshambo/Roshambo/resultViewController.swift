@@ -12,17 +12,23 @@ class resultViewController: UIViewController {
     var results: String?
     
     @IBOutlet var result: UILabel!
+    @IBOutlet var images: UIImageView!
     
-    /// Compare the user’s play with the randomly generated play to determine a winner. Compare opponent and user value to determine a winner, need to work out the amount of options and come up with something: switch statement with player result and then case comparisions and set the label text depending on the result
-    
-    /// method to display message depending on who is a winner
+
     
     override func viewWillAppear(_ animated: Bool) {
         
         if let results = self.results {
             self.result.text = results
+            
+            let name = self.results
+            let names = name!.firstIndex(of: ",")
+            let imagePicker = name![..<names!]
+            
+            self.images.image = UIImage(named: "\(imagePicker)")
         } else {
             self.result = nil
+            self.images.image = nil
         }
         
     }
