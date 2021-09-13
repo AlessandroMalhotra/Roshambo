@@ -9,9 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: Outlet
+    
     @IBOutlet var play: UILabel!
     
-    /// method that generates a random value for the computer from a list of values containing rock, paper, scissors and return this value. Need to call this method in each action method and pass it to result view controller.
+    
+    // MARK: Generates Random Opponents Play
     
     func opponentPlay() -> String {
         let choices = ["rock", "paper", "scissors"]
@@ -20,6 +23,9 @@ class ViewController: UIViewController {
         
         return result
     }
+    
+    
+    // MARK: Compares User and Opponent Choices and returns a String
     
     func playGame(_ buttonPressed: String, _ opponentValue: String) -> String {
         
@@ -49,6 +55,8 @@ class ViewController: UIViewController {
         }
     }
 
+    // MARK: Programmatic Approach
+    
     @IBAction func rock() {
         
         let controller: resultViewController
@@ -65,6 +73,8 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: Segue with Code Approach
+    
     @IBAction func paper() {
         
         self.performSegue(withIdentifier: "paperSegue", sender: self)
@@ -72,10 +82,14 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: Segue
+    
     @IBAction func scissors() {
         
         performSegue(withIdentifier: "scissorsSegue", sender: self)
     }
+    
+    // MARK: Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

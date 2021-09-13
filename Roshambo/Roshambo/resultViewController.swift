@@ -9,12 +9,16 @@ import UIKit
 
 class resultViewController: UIViewController {
     
+   // MARK: Propertiees
+    
     var results: String?
+    
+   // MARK: Outlets
     
     @IBOutlet var result: UILabel!
     
     
-
+    // MARK: Displays Results
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -26,6 +30,7 @@ class resultViewController: UIViewController {
         
     }
     
+    // MARK: Actions
     
     @IBAction func playAgain() {
         
