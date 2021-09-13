@@ -93,7 +93,7 @@ class ViewController: UIViewController {
             
             let opponent = opponentPlay()
             
-            let play = playGame("rock", opponent)
+            let play = playGame("paper", opponent)
             
             controller.results = play
             
